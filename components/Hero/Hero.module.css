@@ -1,0 +1,17 @@
+.heroContainer {
+  padding-block: 6rem;
+}
+.heroText {
+  font-size: var(--font-size-hero);
+  color: var(--color-main-text);
+  font-weight: 900;
+  font-family: var(--font-satoshi);
+  margin-bottom: 0px;
+}
+.descText {
+  margin: 0px;
+  font-size: var(--font-size-header);
+  color: var(--color-second-text);
+  font-weight: 500;
+  font-family: var(--font-satoshi);
+}

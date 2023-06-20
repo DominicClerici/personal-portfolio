@@ -1,0 +1,42 @@
+.aboutContainer {
+  margin-block-start: 6rem;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  position: relative;
+  width: 100%;
+}
+.skillContainer {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 60%;
+}
+.imageContainer {
+  position: relative;
+  width: 40%;
+}
+.imageContainer img {
+  border-radius: 10px;
+}
+.skillLabel {
+  margin: 10px;
+  color: white;
+  font-weight: 600;
+}
+.skillBack {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background-color: transparent;
+  backdrop-filter: brightness(2);
+  border-radius: 20px;
+}
+.skillBar {
+  border-radius: 20px;
+  height: 100%;
+  background-color: var(--color-emphasis);
+}

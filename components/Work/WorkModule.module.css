@@ -1,0 +1,41 @@
+.workModuleContainer {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(10, 1fr);
+  border-radius: 10px;
+  padding: 10px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+.workTimeContainer {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.workTime {
+  color: var(--color-second-text);
+  font-family: var(--font-inter);
+  font-weight: 600;
+}
+.workInfoContainer {
+  grid-column-start: 4;
+  grid-column-end: end;
+}
+.workModuleContainer:hover {
+  background-color: rgba(200, 200, 255, 0.05);
+}
+.workModuleContainer:hover .workInfoBackground {
+  box-shadow: 0px 0px 7px 0px rgb(15, 15, 20);
+  background-position: 0% 0% !important;
+}
+.workInfoBackground {
+  transition-duration: 0.2s;
+  border-radius: 10px;
+  padding: 1rem;
+  background-size: 300% !important;
+  background-position: 100% 0% !important;
+  backdrop-filter: brightness(1);
+  color: white;
+}
+.workInfoBackground h3 {
+  margin: 0px;
+}
