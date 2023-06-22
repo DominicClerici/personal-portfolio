@@ -118,6 +118,7 @@ svg {
 .spacerSmall {
   margin: 50px 0px;
 }
+<<<<<<< HEAD
 @media (min-width: 621px) {
   .hoverCont:hover .hoverFade {
     opacity: 0.3;
@@ -126,3 +127,22 @@ svg {
     opacity: 1;
   }
 }
+=======
+@keyframes falling {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.fallingObj {
+  display: inline-block;
+  position: relative;
+  animation: 4s linear falling forwards;
+  width: 2px;
+  height: 200px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+>>>>>>> 664671882a3ac246217c3c455912168ea5dd5b8c
