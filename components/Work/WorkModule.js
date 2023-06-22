@@ -3,7 +3,7 @@ import styles from "@/components/Work/WorkModule.module.css"
 
 const WorkModule = ({ children, establishment, dates, color1, color2 }) => {
   return (
-    <div className={styles.workModuleContainer}>
+    <div className={`${styles.workModuleContainer} hoverFade`}>
       <div className={styles.workTimeContainer}>
         <p className={styles.workTime}>{dates}</p>
       </div>

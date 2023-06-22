@@ -1,0 +1,8 @@
+.endSection {
+  margin-block: 5rem;
+  padding-inline: 5rem;
+}
+.endSection p {
+  font-size: var(--font-size-small);
+  color: gray;
+}

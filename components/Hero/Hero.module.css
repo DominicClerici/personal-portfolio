@@ -1,5 +1,24 @@
 .heroContainer {
+  position: sticky;
+  top: 0px;
   padding-block: 6rem;
+  height: 100%;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 1023px) {
+  .heroContainer {
+    position: relative;
+    justify-content: flex-start;
+  }
+  .navigation {
+    display: none;
+  }
+  .links {
+    display: none;
+  }
 }
 .heroText {
   font-size: var(--font-size-hero);
@@ -14,4 +33,47 @@
   color: var(--color-second-text);
   font-weight: 500;
   font-family: var(--font-satoshi);
+}
+.links ul {
+  padding: 0px;
+  display: flex;
+  flex-flow: row nowrap;
+  list-style: none;
+  gap: 10px;
+}
+.links ul li a {
+  color: white;
+}
+.navigation {
+  position: relative;
+}
+.navigation ul {
+  margin-top: 2rem;
+  padding-left: 40px;
+  list-style: none;
+}
+.navigation ul li {
+  padding-block: 0.3rem;
+}
+.navigation ul li a {
+  text-decoration: none;
+  font-family: var(--font-inter);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: var(--font-size-paragraph);
+  color: gray;
+  transition-duration: 0.2s;
+}
+.navigation ul li a:hover {
+  color: white !important;
+}
+.scrollInd {
+  transition: top ease 0.2s;
+  height: 10px;
+  width: 30px;
+  border-radius: 5px;
+  background-color: white;
+  position: absolute;
+  top: 10.2969px;
 }

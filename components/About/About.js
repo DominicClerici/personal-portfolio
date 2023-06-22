@@ -18,7 +18,7 @@ const About = () => {
         <br></br> <br></br>I began my journey as a programmer all the way back
         in 2014, when I was a 6th grader. I played the game{" "}
         <span className="emphasis">Watch_Dogs</span> and became obsessed with
-        learning how to 'hack.' It has only been up from there.
+        learning how to &apos;hack.&apos; It has only been up from there.
       </p>
       <div className={styles.row}>
         <div className={styles.skillContainer}>
@@ -34,7 +34,7 @@ const About = () => {
           </div>
         </div>
         <div className={styles.imageContainer}>
-          <Image src={img} fill></Image>
+          <Image src={img} alt="A photo of me." fill></Image>
         </div>
       </div>
     </section>
