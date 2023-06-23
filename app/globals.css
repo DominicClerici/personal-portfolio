@@ -1,19 +1,50 @@
 :root {
-  --color-background: #000b15;
+  --color-background: linear-gradient(
+    330deg,
+    rgba(0, 11, 19, 1) 0%,
+    rgba(66, 92, 116, 1) 100%
+  );
   --color-emphasis: #00ffff;
   --color-emphasis-semitrans: #00ffff1f;
   --color-main-text: #ecfcff;
   --color-second-text: #b1c3c7;
   --color-accent-gray: #111d28;
-
   /* --font-size-small: clamp(0.7rem, 0.208rem + 0.769vw, 0.9rem);
   --font-size-paragraph: clamp(1rem, 0.508rem + 0.769vw, 1.2rem);
   --font-size-medium: clamp(1.3rem, 0.562rem + 1.154vw, 1.6rem);
   --font-size-header: clamp(1.8rem, 0.323rem + 2.308vw, 2.4rem);
   --font-size-hero: clamp(2.4rem, 0.923rem + 2.308vw, 3rem); */
 }
+@media (max-width: 1023px) {
+  .twoColumns {
+    flex-direction: column;
+    gap: 0px;
+    padding: 0 clamp(3.125rem, -6.287rem + 19.608vw, 6.25rem);
+  }
+  .content {
+    margin: 0;
+  }
+  .staticInfo {
+    margin: 0;
+  }
+  .equalCol {
+    max-width: 1200px;
+  }
+}
+@media (max-width: 767px) and (min-width: 426px) {
+  .twoColumns {
+    padding: 0 clamp(1.563rem, -0.379rem + 7.31vw, 3.125rem);
+  }
+}
+@media (max-width: 425px) {
+  .twoColumns {
+    padding: 0 clamp(0.625rem, -2.232rem + 14.286vw, 1.563rem);
+  }
+}
+
 @media (min-width: 1024px) {
   :root {
+    --padding: 100px;
     --font-size-small: clamp(0.7rem, 0.208rem + 0.769vw, 0.9rem);
     --font-size-paragraph: clamp(1rem, 0.508rem + 0.769vw, 1.2rem);
     --font-size-medium: clamp(1.3rem, 0.562rem + 1.154vw, 1.6rem);
@@ -23,6 +54,7 @@
 }
 @media (max-width: 1023px) and (min-width: 768px) {
   :root {
+    --padding: clamp(3.125rem, -6.287rem + 19.608vw, 6.25rem);
     --font-size-small: 0.8rem;
     --font-size-paragraph: 1rem;
     --font-size-medium: clamp(1.25rem, 0.196rem + 2.196vw, 1.6rem);
@@ -32,6 +64,7 @@
 }
 @media (max-width: 767px) {
   :root {
+    --padding: clamp(1.563rem, -0.379rem + 7.31vw, 3.125rem);
     --font-size-small: clamp(0.6rem, 0.457rem + 0.716vw, 0.8rem);
     --font-size-paragraph: clamp(0.8rem, 0.657rem + 0.716vw, 1rem);
     --font-size-medium: clamp(1rem, 0.821rem + 0.895vw, 1.25rem);
@@ -39,11 +72,16 @@
     --font-size-hero: clamp(2rem, 1.284rem + 3.579vw, 3rem);
   }
 }
+@media (max-width: 425px) and (min-width: 320px) {
+  :root {
+    --padding: clamp(0.625rem, -2.232rem + 14.286vw, 1.563rem);
+  }
+}
 ::selection {
   text-shadow: none;
 
   color: #fff;
-  background-color: #1f3c57;
+  background-color: #398ec7;
 }
 @media (prefers-reduced-motion: no-preference) {
   html {
@@ -67,7 +105,7 @@ body {
     "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS",
     Verdana, "Verdana Ref", sans-serif;
 
-  background-color: var(--color-background);
+  background: var(--color-background);
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -90,8 +128,23 @@ svg {
   color: var(--color-second-text);
 }
 .defaultHeading {
+  z-index: 20;
+  margin-block: 0px;
+  margin-left: calc(-1 * var(--padding));
+  margin-right: calc(-1 * var(--padding));
+  padding: 5px var(--padding);
+  backdrop-filter: blur(8px);
+  font-weight: 600;
+  font-family: var(--font-satoshi);
   font-size: var(--font-size-header);
   color: var(--color-main-text);
+  position: sticky;
+  top: 0px;
+}
+@media (min-width: 1024px) {
+  .defaultHeading {
+    display: none;
+  }
 }
 .emphasis {
   color: var(--color-emphasis);
@@ -124,5 +177,42 @@ svg {
   }
   .hoverCont .hoverFade:hover {
     opacity: 1;
+  }
+}
+@keyframes scrollFadeInAnim {
+  0% {
+    transform: translateY(70px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+/* .shouldDoAnim {
+  opacity: 0;
+  transform: translateY(70px);
+}
+.scrollAnimClass {
+  animation: scrollFadeInAnim 0.5s ease forwards;
+} */
+@media (max-width: 1023px) {
+  .shouldDoAnim {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  .scrollAnimClass {
+    animation: scrollFadeInAnim 0.5s ease forwards;
+  }
+}
+.skillBar {
+  border-radius: 20px;
+  height: 100%;
+  background-color: var(--color-emphasis);
+  transition: width 0.5s 1s;
+}
+@media (max-width: 1023px) {
+  .doingAnim .skillBar {
+    width: 20px !important;
   }
 }

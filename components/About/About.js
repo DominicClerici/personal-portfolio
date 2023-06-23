@@ -6,8 +6,11 @@ import Skill from "./Skill"
 
 const About = () => {
   return (
-    <section id="about" className={`${styles.aboutContainer}`}>
-      <h3 className="defaultHeading">Who I am.</h3>
+    <section
+      id="about"
+      className={`${styles.aboutContainer} shouldDoAnim doingAnim`}
+    >
+      <h3 className="defaultHeading">About me.</h3>
       <p className="defaultParagraph">
         I am a student at <span className="emphasis">Indiana University</span>,
         in the <span className="emphasis">Luddy school of informatics</span>{" "}
@@ -24,13 +27,13 @@ const About = () => {
         <div className={styles.skillContainer}>
           <div>
             <Skill percent={80}>React</Skill>
-            <Skill percent={60}>React</Skill>
-            <Skill percent={45}>React</Skill>
+            <Skill percent={60}>CSS</Skill>
+            <Skill percent={45}>Python</Skill>
           </div>
           <div>
-            <Skill percent={50}>React</Skill>
-            <Skill percent={70}>React</Skill>
-            <Skill percent={25}>React</Skill>
+            <Skill percent={70}>Javascript</Skill>
+            <Skill percent={40}>ML/AI</Skill>
+            <Skill percent={15}>C++</Skill>
           </div>
         </div>
         <div className={styles.imageContainer}>

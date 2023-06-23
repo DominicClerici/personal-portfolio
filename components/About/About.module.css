@@ -1,5 +1,5 @@
 .aboutContainer {
-  margin-block-start: 6rem;
+  margin-block-start: 7rem;
 }
 .row {
   display: flex;
@@ -34,9 +34,4 @@
   background-color: transparent;
   backdrop-filter: brightness(2);
   border-radius: 20px;
-}
-.skillBar {
-  border-radius: 20px;
-  height: 100%;
-  background-color: var(--color-emphasis);
 }

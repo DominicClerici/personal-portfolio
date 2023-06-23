@@ -4,7 +4,7 @@
   gap: 40px;
   max-width: 1600px;
   margin: 0 auto;
-  padding: 0 100px;
+  padding: 0 var(--padding);
   position: relative;
   height: 100%;
 }
@@ -29,7 +29,6 @@
   .twoColumns {
     flex-direction: column;
     gap: 0px;
-    padding: 0 clamp(3.125rem, -6.287rem + 19.608vw, 6.25rem);
   }
   .content {
     margin: 0;
@@ -39,15 +38,5 @@
   }
   .equalCol {
     max-width: 1200px;
-  }
-}
-@media (max-width: 767px) and (min-width: 426px) {
-  .twoColumns {
-    padding: 0 clamp(1.563rem, -0.379rem + 7.31vw, 3.125rem);
-  }
-}
-@media (max-width: 425px) {
-  .twoColumns {
-    padding: 0 clamp(0.625rem, -2.232rem + 14.286vw, 1.563rem);
   }
 }

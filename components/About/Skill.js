@@ -6,7 +6,7 @@ const Skill = ({ children, percent }) => {
     <div>
       <p className={styles.skillLabel}>{children}</p>
       <div className={styles.skillBack}>
-        <div className={styles.skillBar} style={{ width: `${percent}%` }}></div>
+        <div className="skillBar" style={{ width: `${percent}%` }}></div>
       </div>
     </div>
   )

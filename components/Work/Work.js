@@ -4,8 +4,8 @@ import WorkModule from "./WorkModule"
 
 const Work = () => {
   return (
-    <section id="experience" className={styles.workContainer}>
-      <h3 className={`defaultHeading`}>What have I been up to?</h3>
+    <section id="experience" className={`${styles.workContainer} shouldDoAnim`}>
+      <h3 className={`defaultHeading`}>Experience.</h3>
       <div className="hoverCont">
         <WorkModule
           color1={"0,5,255"}

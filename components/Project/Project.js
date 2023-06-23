@@ -4,8 +4,8 @@ import img from "@/app/hollisLandscaping.png"
 
 const Project = () => {
   return (
-    <section id="projects">
-      <h3 className="defaultHeading">My Projects</h3>
+    <section id="projects" className="shouldDoAnim">
+      <h3 className="defaultHeading">Projects.</h3>
       <div className="hoverCont">
         <ProjectModule
           image={img}
