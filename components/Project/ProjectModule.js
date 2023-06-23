@@ -7,7 +7,7 @@ const ProjectModule = ({ desc, name, image, link }) => {
   return (
     <>
       {link != null ? (
-        <a href={link}>
+        <a href={link} target="_blank">
           <div className={`${styles.projModuleContainer} hoverFade`}>
             <div className={styles.projImageContainer}>
               <div className={styles.imgCont}>

@@ -15,7 +15,7 @@ const WorkModule = ({
   return (
     <>
       {link != null ? (
-        <a href={link}>
+        <a href={link} target="_blank">
           <div className={`${styles.workModuleContainer} hoverFade`}>
             <div className={styles.workTimeContainer}>
               <p className={styles.workTime}>{dates}</p>
