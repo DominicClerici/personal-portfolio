@@ -86,3 +86,18 @@
     padding: 0;
   }
 }
+.maybeExternalLink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.maybeExternalLink img {
+  filter: invert(0.6);
+  /* transform: scale(0.75); */
+  transition-duration: 0.2s;
+}
+.projModuleContainer:hover .maybeExternalLink img {
+  transform: translateX(20px);
+  filter: invert(1);
+}

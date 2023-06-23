@@ -52,6 +52,7 @@
 .links ul li a img {
   opacity: 0.5;
   filter: invert(1);
+  transition: opacity 0.2s;
 }
 .links ul li:hover a img {
   opacity: 1;

@@ -8,6 +8,7 @@ const Project = () => {
       <h3 className="defaultHeading">Projects.</h3>
       <div className="hoverCont">
         <ProjectModule
+          link={"https://hollislandscaping.vercel.app/"}
           image={img}
           name="Hollis Landscaping"
           desc="Some kind of long description about the project that I completed will
