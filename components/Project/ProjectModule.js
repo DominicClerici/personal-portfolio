@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "@/components/Project/ProjectModule.module.css"
 import Image from "next/image"
-import arrow from "@/app/arrow.png"
+import arrow from "@/app/arrow.webp"
 
 const ProjectModule = ({ desc, name, image, link }) => {
   return (

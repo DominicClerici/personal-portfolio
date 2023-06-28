@@ -23,10 +23,12 @@
   border-radius: 10px;
 }
 .skillLabel {
-  margin: 10px;
+  margin: 0.3em 0 0.3em 0.3em;
   color: white;
   font-weight: 600;
+  font-size: var(--font-size-paragraph);
 }
+
 .skillBack {
   position: relative;
   width: 100%;

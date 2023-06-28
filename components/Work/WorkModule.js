@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "@/components/Work/WorkModule.module.css"
-import arrow from "@/app/arrow.png"
+import arrow from "@/app/arrow.webp"
 import Image from "next/image"
 
 const WorkModule = ({

@@ -2,9 +2,9 @@ import React from "react"
 import styles from "@/components/Hero/Hero.module.css"
 import ScrollModule from "./ScrollModule"
 import Image from "next/image"
-import linkedin from "@/app/linkedin.png"
-import github from "@/app/github.png"
-import email from "@/app/email.png"
+import linkedin from "@/app/linkedin.webp"
+import github from "@/app/github.webp"
+import email from "@/app/email.webp"
 
 const Hero = () => {
   return (

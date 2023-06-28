@@ -210,6 +210,7 @@ svg {
 }
 .skillBar {
   border-radius: 20px;
+  min-width: 20px;
   height: 100%;
   background-color: var(--color-emphasis);
   transition: width 0.5s 1s;
