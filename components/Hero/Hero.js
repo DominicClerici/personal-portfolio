@@ -5,6 +5,7 @@ import Image from "next/image"
 import linkedin from "@/app/linkedin.webp"
 import github from "@/app/github.webp"
 import email from "@/app/email.webp"
+import Link from "next/link"
 
 const Hero = () => {
   return (
@@ -35,6 +36,9 @@ const Hero = () => {
             </li>
           </ul>
         </nav>
+        <Link href={"/resume"} className={styles.button}>
+          View my resume
+        </Link>
       </div>
       <div className={styles.links}>
         <ul>
@@ -44,6 +48,7 @@ const Hero = () => {
               href="https://www.linkedin.com/in/dominic-clerici/"
             >
               <Image
+                draggable="false"
                 src={linkedin}
                 alt="LinkedIn"
                 height="30"
@@ -53,12 +58,24 @@ const Hero = () => {
           </li>
           <li>
             <a target="_blank" href="https://github.com/DominicClerici">
-              <Image src={github} alt="Github" height="30" width="30"></Image>
+              <Image
+                src={github}
+                alt="Github"
+                height="30"
+                width="30"
+                draggable="false"
+              ></Image>
             </a>
           </li>
           <li>
             <a href="mailto:dclerici77@gmail.com">
-              <Image src={email} alt="Email" height="30" width="30"></Image>
+              <Image
+                src={email}
+                alt="Email"
+                height="30"
+                width="30"
+                draggable="false"
+              ></Image>
             </a>
           </li>
         </ul>

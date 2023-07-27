@@ -10,7 +10,7 @@ const About = () => {
       id="about"
       className={`${styles.aboutContainer} shouldDoAnim doingAnim`}
     >
-      <h3 className="defaultHeading">About me.</h3>
+      <h3 className="defaultHeading">About me</h3>
       <p className="defaultParagraph">
         I am a student at{" "}
         <a

@@ -1,24 +1,41 @@
-.projModuleContainer {
+.container {
   display: grid;
-  width: 100%;
   grid-template-columns: repeat(10, 1fr);
   border-radius: 10px;
   padding: 10px;
-  transition-duration: 0.2s;
+  width: 100%;
   cursor: pointer;
   position: relative;
+  transition-duration: 0.2s;
 }
 @media (min-width: 621px) {
-  .projModuleContainer:hover {
+  .container:hover {
     background-color: rgba(200, 200, 255, 0.05);
   }
 }
-.projImageContainer {
+.container * {
+  transition-duration: 0.2s;
+}
+.leftCont {
   grid-column-start: 1;
   grid-column-end: 4;
   position: relative;
   height: 100%;
   width: 100%;
+  padding-block: 1rem;
+}
+.rightCont {
+  margin-left: 10px;
+  padding: 1rem;
+  grid-column-start: 4;
+  grid-column-end: end;
+  position: relative;
+}
+.dates {
+  color: var(--color-second-text);
+  font-family: var(--font-inter);
+  font-size: var(--font-size-paragraph);
+  font-weight: 600;
 }
 .imgCont {
   display: flex;
@@ -34,23 +51,34 @@
   border-radius: 5px;
   border: 2px solid rgba(255, 255, 255, 0.1);
 }
-.projInfoContainer {
+.externalLink {
   margin-left: 10px;
-  padding: 1rem;
-  grid-column-start: 4;
-  grid-column-end: end;
-  position: relative;
+  opacity: 0;
+  filter: invert(0.6);
+  transform: translateX(0px);
 }
-.projInfoContainer h3 {
-  margin-top: 0px;
-  margin-bottom: 10px;
-  font-size: var(--font-size-medium);
+.container:hover .externalLink {
+  opacity: 1;
+  transform: translateX(20px);
+  filter: invert(1);
+}
+.rowCenter {
+  display: flex;
+  align-items: center;
+}
+.title {
   color: var(--color-main-text);
+  font-size: var(--font-size-medium);
+  margin: 0;
 }
-.projInfoContainer p {
-  margin-block: 0.5em;
-  font-size: var(--font-size-paragraph);
+.subTitle {
   color: var(--color-second-text);
+  font-size: var(--font-size-paragraph);
+  margin: 0;
+}
+.desc {
+  color: var(--color-second-text);
+  font-size: var(--font-size-paragraph);
 }
 .row {
   gap: 10px;
@@ -68,16 +96,16 @@
   margin: 0px !important;
 }
 @media (max-width: 620px) {
-  .projModuleContainer {
+  .container {
     display: flex;
     flex-direction: column;
     padding: 10px 0;
   }
-  .projInfoContainer {
+  .rightCont {
     padding: 0;
     margin: 0;
   }
-  .projImageContainer {
+  .leftCont {
     width: 240px;
     order: 5;
   }
@@ -85,19 +113,11 @@
     margin-block: 20px;
     padding: 0;
   }
-}
-.maybeExternalLink {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-}
-.maybeExternalLink img {
-  filter: invert(0.6);
-  /* transform: scale(0.75); */
-  transition-duration: 0.2s;
-}
-.projModuleContainer:hover .maybeExternalLink img {
-  transform: translateX(20px);
-  filter: invert(1);
+  .leftCont.date {
+    padding: 0;
+    order: 0;
+  }
+  .externalLink {
+    opacity: 1;
+  }
 }

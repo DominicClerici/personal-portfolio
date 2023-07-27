@@ -1,35 +1,35 @@
 import React from "react"
-import ProjectModule from "./ProjectModule"
 import img from "@/app/hollisLandscaping.png"
 import spo from "@/app/spo.webp"
 import start from "@/app/start.webp"
+import Module from "../Module/Module"
 
 const Project = () => {
   return (
     <section id="projects" className="shouldDoAnim">
-      <h3 className="defaultHeading">Projects.</h3>
+      <h2 className="defaultHeading">Projects</h2>
       <div className="hoverCont">
-        <ProjectModule
+        <Module
           link={"https://spotifystats.dominicclerici.com/"}
-          image={start}
-          name="Spotify Stats"
+          img={start}
+          title="Spotify Stats"
           desc="Displays your spotify listening stats. Shows your most listened to artists and songs over three timeframes."
           skills={["API", "User Authentication", "Next.js", "CSS Modules"]}
-        ></ProjectModule>
-        <ProjectModule
+        ></Module>
+        <Module
           link={"https://startjs.dominicclerici.com/"}
-          image={spo}
-          name="Start.js"
+          img={spo}
+          title="Start.js"
           desc="A simple start page made with Next.js. Features cosmetic customization, as well as user modifiable shortcuts. "
           skills={["Next.js", "Localstorage", "Cookies", "Dynamic Styling"]}
-        ></ProjectModule>
-        <ProjectModule
+        ></Module>
+        <Module
           link={"https://hollislandscaping.vercel.app/"}
-          image={img}
-          name="Hollis Landscaping"
+          img={img}
+          title="Hollis Landscaping"
           desc="A mockup design landing page for a local landscaping company."
           skills={["React", "CSS Modules", "SSR", "HTML Forms"]}
-        ></ProjectModule>
+        ></Module>
       </div>
     </section>
   )
