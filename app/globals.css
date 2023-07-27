@@ -108,7 +108,8 @@ body {
     "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS",
     Verdana, "Verdana Ref", sans-serif;
 
-  background: var(--color-background);
+  background: rgba(32, 51, 67, 1) 100%;
+  background-image: var(--color-background);
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
