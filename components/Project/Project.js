@@ -10,14 +10,14 @@ const Project = () => {
       <h2 className="defaultHeading">Projects</h2>
       <div className="hoverCont">
         <Module
-          link={"https://spotifystats.dominicclerici.com/"}
+          link={"https://www.spotifystats.dominicclerici.com/"}
           img={start}
           title="Spotify Stats"
           desc="Displays your spotify listening stats. Shows your most listened to artists and songs over three timeframes."
           skills={["API", "User Authentication", "Next.js", "CSS Modules"]}
         ></Module>
         <Module
-          link={"https://startjs.dominicclerici.com/"}
+          link={"https://www.startjs.dominicclerici.com/"}
           img={spo}
           title="Start.js"
           desc="A simple start page made with Next.js. Features cosmetic customization, as well as user modifiable shortcuts. "
