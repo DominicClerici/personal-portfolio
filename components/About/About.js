@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "@/components/About/About.module.css"
 import Image from "next/image"
-import img from "@/app/gigachad.jpg"
+import img from "@/app/profile.webp"
 import Skill from "./Skill"
 
 const About = () => {
