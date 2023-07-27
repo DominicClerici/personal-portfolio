@@ -3,11 +3,9 @@ import React, { useEffect, useState } from "react"
 
 const ScrollModule = () => {
   const [position, setPosition] = useState(0)
-  const scrollHandler = (e) => {
+  const [using, setUsing] = useState(false)
+  const scrollHandler = () => {
     if (window.visualViewport.width >= 1024) {
-      let percentScrolled =
-        window.scrollY /
-        (document.body.scrollHeight - window.visualViewport.height)
       let about = document.getElementById("about").getBoundingClientRect().top
       let work = document
         .getElementById("experience")
@@ -20,8 +18,6 @@ const ScrollModule = () => {
         setPosition(2)
       }
     }
-
-    // console.log(result)
   }
   const handleSetPosition = (e) => {
     if (window.visualViewport.width >= 1024) {
@@ -38,7 +34,6 @@ const ScrollModule = () => {
         (workB.bottom - workB.top) / 2 + workB.top - cont.top
       let projHeightOffset =
         (projB.bottom - projB.top) / 2 + projB.top - cont.top
-      console.log(e)
 
       switch (e) {
         case 0:
@@ -65,7 +60,7 @@ const ScrollModule = () => {
   useEffect(() => {
     handleSetPosition(position)
   }, [position])
-  const callback = (entries, observer) => {
+  const callback = (entries) => {
     entries.forEach((entry) => {
       if (
         entry.isIntersecting &&
@@ -80,21 +75,30 @@ const ScrollModule = () => {
     })
   }
   const createScrollObserver = () => {
-    if (window.visualViewport.width < 1024) {
-      const observer = new IntersectionObserver(callback, {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.3,
-      })
-      let els = document.getElementsByClassName("shouldDoAnim")
-      for (let i = 0; i < els.length; i++) {
-        observer.observe(els[i])
+    if (!using) {
+      if (window.visualViewport.width < 1024) {
+        setUsing(true)
+        const observer = new IntersectionObserver(callback, {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.3,
+        })
+        let els = document.getElementsByClassName("shouldDoAnim")
+        for (let i = 0; i < els.length; i++) {
+          observer.observe(els[i])
+        }
       }
     }
   }
   useEffect(() => {
+    window.addEventListener("resize", createScrollObserver)
+    return () => {
+      window.removeEventListener("resize", createScrollObserver)
+    }
+  }, [createScrollObserver])
+  useEffect(() => {
     createScrollObserver()
-  }, [])
+  })
 
   useEffect(() => {
     document.addEventListener("scroll", scrollHandler)

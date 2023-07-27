@@ -2,6 +2,11 @@
   margin-block: 5rem;
   padding-inline: 5rem;
 }
+@media (max-width: 1023px) {
+  .endSection {
+    padding-inline: 1rem;
+  }
+}
 .endSection p {
   font-size: var(--font-size-small);
   color: gray;

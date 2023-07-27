@@ -3,7 +3,7 @@ import styles from "@/components/Project/ProjectModule.module.css"
 import Image from "next/image"
 import arrow from "@/app/arrow.webp"
 
-const ProjectModule = ({ desc, name, image, link }) => {
+const ProjectModule = ({ desc, name, image, link, skills }) => {
   return (
     <>
       {link != null ? (
@@ -31,10 +31,13 @@ const ProjectModule = ({ desc, name, image, link }) => {
               </div>
               <p>{desc}</p>
               <div className={styles.row}>
-                <p className={styles.skill}>React</p>
-                <p className={styles.skill}>Node.js</p>
-                <p className={styles.skill}>HTML</p>
-                <p className={styles.skill}>CSS</p>
+                {skills.map((e, i) => {
+                  return (
+                    <p className={styles.skill} key={i + "sk"}>
+                      {e}
+                    </p>
+                  )
+                })}
               </div>
             </div>
           </div>
@@ -60,10 +63,13 @@ const ProjectModule = ({ desc, name, image, link }) => {
             </div>
             <p>{desc}</p>
             <div className={styles.row}>
-              <p className={styles.skill}>React</p>
-              <p className={styles.skill}>Node.js</p>
-              <p className={styles.skill}>HTML</p>
-              <p className={styles.skill}>CSS</p>
+              {skills.map((e, i) => {
+                return (
+                  <p className={styles.skill} key={i + "sk"}>
+                    {e}
+                  </p>
+                )
+              })}
             </div>
           </div>
         </div>
