@@ -73,7 +73,7 @@ const Hero = () => {
             </a>
           </li>
           <li>
-            <a href="mailto:dclerici77@gmail.com">
+            <a href="mailto:contact@dominicclerici.com">
               <Image
                 src={email}
                 alt="Email"
