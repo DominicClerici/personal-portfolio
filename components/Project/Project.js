@@ -1,5 +1,5 @@
 import React from "react"
-import img from "@/app/hollisLandscaping.png"
+import img from "@/app/sorting.png"
 import spo from "@/app/spo.webp"
 import start from "@/app/start.webp"
 import Module from "../Module/Module"
@@ -24,11 +24,11 @@ const Project = () => {
           skills={["Next.js", "Localstorage", "Cookies", "Dynamic Styling"]}
         ></Module>
         <Module
-          link={"https://hollislandscaping.vercel.app/"}
+          link={"https://github.com/DominicClerici/sorting-visualizer"}
           img={img}
-          title="Hollis Landscaping"
-          desc="A mockup design landing page for a local landscaping company."
-          skills={["React", "CSS Modules", "SSR", "HTML Forms"]}
+          title="Sorting Algorithm Visualizer"
+          desc="A small app to visualize various sorting algorithms such as insertion sort, bubble sort, and more. Built in python with pygame"
+          skills={["Python", "pygame"]}
         ></Module>
       </div>
     </section>
