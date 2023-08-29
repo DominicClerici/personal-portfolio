@@ -37,18 +37,24 @@
 .imageContainer img {
   border-radius: 10px;
 }
+.indivSkill {
+  display: flex;
+  align-items: center;
+}
 .skillLabel {
   margin: 0.3em 0 0.3em 0.3em;
   color: white;
   font-weight: 600;
   font-size: var(--font-size-paragraph);
 }
-
-.skillBack {
-  position: relative;
-  width: 100%;
-  height: 20px;
-  background-color: transparent;
-  backdrop-filter: brightness(2);
-  border-radius: 20px;
+.skillIcon {
+  scale: 0.5;
+  rotate: 90deg;
+}
+.skillIcon polygon {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  stroke-width: 4px;
+  stroke: var(--color-emphasis);
 }
